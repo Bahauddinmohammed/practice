@@ -1,0 +1,51 @@
+<p>jameel</p>
+<!-- string interpolation -->
+<p>{{data}}</p>
+<p>{{name()}}</p>
+<img src="{{path}}">
+<p>{{2+2}}</p>
+<img [src]="path">
+
+<!-- property binding -->
+<p [hidden]="ishidden">Hello world..</p>
+
+<img [src]="path">
+<!-- //src,class,id,hidden,diabled -->
+
+<input type="text" value="{{data}}" disabled="{{isdisabled}}">
+<input type="text" [value]="data" [disabled]="isdisabled">
+
+<!-- class binding -->
+<p [class]="isactive?'para':'para2'">my computer</p>
+<p [class]="{'para':isactive}">my world</p>
+<p [class.para]="isactive">jameel</p>
+<p [class]="['para','para2']">fdfdfd</p>
+
+<!-- style binding -->
+
+<p [style]="{color:cvar}">mujeeba</p>
+<p [style.color]="dvar">bahauddin</p>
+<p [style]="mystyle">jameel</p>
+
+<!-- attribute -->
+
+<table class="table">
+  <thead>
+    <tr>
+    <th>s.no</th>
+    <th>Name</th>
+    <th [attr.colspan]="cols">designation</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>jameel</td>
+      <td>software</td>
+      <td>software</td>
+     
+    </tr>
+  </tbody>
+</table>
+

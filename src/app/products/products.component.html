@@ -1,0 +1,43 @@
+<!-- ngfor -->
+<div class="container">
+  <div>
+    <div class="row col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr class="bg-primary">
+            <th>S.No</th>
+            <th>Names</th>
+            <th>designation</th>
+            <th>rollno</th>
+            <th>marks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="!mydata">
+            <td colspan="5" class="text-center">Data is not found.</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr *ngFor="let x of mydata;index as i">
+            <td>{{i+1}}</td>
+            <td>{{x.names}}</td>
+            <td>{{x.designation}}</td>
+            <td>{{x.rollno}}</td>
+            <td>{{x.marks}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- attribute directive -->
+  <h1 [ngClass]="isactive?'head':'head2'">jameel</h1> <!--ternary operator-->
+  <h1 [ngClass]="['head','head2']">alluding</h1>
+  <h1 [ngStyle]="{'backgroundColor':'blue','color':'white'}">bahauddin</h1>
+  <h1 style="color:blue;background-color: black;"></h1>
+  <h1 appDd="bg-danger">this is custom directive</h1>
+  <h1 appDd>this is custom2 directive</h1>
+</div>
+<div appDd>
+  this is hostbinding and hostlistner
+</div>

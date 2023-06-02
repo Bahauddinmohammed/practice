@@ -1,0 +1,14 @@
+.para {
+    color: red;
+}
+
+.para2 {
+    border: 2px solid green;
+
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
